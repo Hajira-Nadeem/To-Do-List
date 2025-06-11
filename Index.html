@@ -7,6 +7,7 @@
     </head>
 
     <body> 
+        <div class = "Top-Section">
         <h1> To-Do-List</h1>
 
 
@@ -14,21 +15,32 @@
             <li> Bring jacket </li>
             <li> Fill up waterbottle</li> 
         </ol>
-        <input placeholder = "enter a task">
-        <button> submit </button>
+        <form> 
+        <input id = "task-input" placeholder = "enter a task">
+        <button id = "submit"> submit </button>
+        </form>
         <hr>
-        <h1> Grocery List</h1>
+        </div>
 
-
+        <div class = "Bottom-Section"> 
+        <h1 class = "grocery"> Grocery List</h1>
         <ol>
             <li> banana </li>
             <li> ice cream </li> 
         </ol>
+
         <input placeholder = "enter a fruit">
         <button> finish </button>
 
         <p>This list is used to remind me to do get all the things I need from the grocery store    
         </p>
+        </div>
+        <script> 
+            document.getElementById('submit').addEventListener('click', function(){
+                value = document.getElementById('task-input').value;
+                alert("value")
+            })
+        </script>
     </body>
 
 </html>

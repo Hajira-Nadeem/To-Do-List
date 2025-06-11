@@ -1,3 +1,18 @@
 h1{
-    color: blue;
+    color: Green ;
 }
+
+.grocery{
+    color: darkred; 
+    font-style: italic;
+    font-size: x-large;
+}
+
+.Bottom-Section, .Top-Section{
+    background-color: blanchedalmond;
+    width: 250px;
+    border: 30px solid brown;
+    padding: 20px;
+    margin: 20px auto; /* This centers it horizontally */
+}
+
