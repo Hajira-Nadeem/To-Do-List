@@ -40,6 +40,26 @@
                 value = document.getElementById('task-input').value;
                 alert("value")
             })
+
+    
+        document.getElementById('submit').addEventListener('click', function(event){
+        event.preventDefault(); // ⛔ Prevent form from refreshing the page
+
+        const input = document.getElementById('task-input');
+        const taskText = input.value;
+
+        if (taskText.trim() !== '') { // ✅ Only add if not empty
+            const newItem = document.createElement('li');
+            newItem.textContent = taskText;
+
+            // Get the first <ol> (To-Do list)
+            const todoList = document.querySelector('.Top-Section ol');
+            todoList.appendChild(newItem);
+
+            input.value = ''; // 🔄 Clear the input
+        }
+    });
+
         </script>
     </body>
 
