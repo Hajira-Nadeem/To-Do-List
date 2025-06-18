@@ -1,54 +1,91 @@
 <html>
-    <head> 
-        <link rel="stylesheet" href="styles.css">
-        <title>
-            To-Do-List
-        </title>
-    </head>
 
-    <body> 
-        <div class = "Top-Section">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        To-Do-List
+    </title>
+</head>
+
+<body>
+    <div class="Top-Section">
         <h1> To-Do-List</h1>
 
 
-        <ol id = "stuff_to_do">
-        <li> Bring jacket </li>
-            <li> Fill up waterbottle</li> 
+        <ol id="stuff_to_do">
+            <li> Bring jacket </li>
+            <li> Fill up waterbottle</li>
         </ol>
 
-        <form> 
-        <input id = "task-input" placeholder = "enter a task">
-        <button id = "submit"> submit </button>
+        <form>
+            <input id="task-input" placeholder="enter a task">
+            <button id="submit"> submit </button>
         </form>
         <hr>
-        </div>
-
-       
-        <script> 
-            document.getElementById('submit').addEventListener('click', function(e){
-                //adding a new item to list
-                e.preventDefault();
-                const input = document.getElementById('task-input');
-                const value = input.value.trim() ;
-                const newItem = document.createElement('li') //created the next number or bulletin point
-                newItem.innerText = value; 
-                document.getElementById('stuff_to_do').appendChild(newItem)
-                input.value = ''
-
-                //removing item from list
-                const deleteBtn = document.createElement('button')
-                deleteBtn.innerText = 'Delete';
-                deleteBtn.style.marginLeft = '10px'
-                deleteBtn.addEventListener('click', function(){
-                        newItem.remove();
-                    });
-                    newItem.appendChild(deleteBtn);
+    </div>
 
 
-                //alert("value")
-            })
+    <script>
+        let tasks = [];
 
-        </script>
-    </body>
+        //when user loads page the data should persist
+        window.addEventListener("load", function () {
+            const saved = JSON.parse(localStorage.getItem("tasks"));
+
+            if (saved) {
+                tasks = saved;
+                saved.forEach(task => {
+                    const li = document.createElement("li");
+                    li.textContent = task
+                    //add delete button here if needed
+                    document.getElementById('stuff_to_do').appendChild(li)
+                });
+
+            }
+        });
+
+
+        //when user presses submit should create a new list item
+        document.getElementById('submit').addEventListener('click', function (e) {
+            //adding a new item to list
+            e.preventDefault();
+            const input = document.getElementById('task-input');
+            const value = input.value.trim();
+
+            if (value === "") {
+                return;
+            }
+
+            tasks.push(value)
+            localStorage.setItem("tasks", JSON.stringify(tasks)); //save array 
+
+
+            const newItem = document.createElement('li') //created the next number or bulletin point
+            newItem.textContent = value;
+            document.getElementById('stuff_to_do').appendChild(newItem)
+            input.value = ""
+
+
+
+            //removing item from list
+            const deleteBtn = document.createElement('button')
+            deleteBtn.innerText = 'Done';
+            deleteBtn.style.marginLeft = '350px'
+            deleteBtn.addEventListener('click', function(){
+                    newItem.remove();
+                });
+                newItem.appendChild(deleteBtn);
+
+
+            //alert("value")
+        })
+
+
+
+
+
+
+    </script>
+</body>
 
 </html>

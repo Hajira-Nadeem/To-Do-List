@@ -1,19 +1,51 @@
-h1{
-    color: Green ;
+/* Header styling */
+h1 {
+    background: linear-gradient(to right, #cceeff, #99ccff, #66b2ff); /* blue gradient */
+    color: rgb(105, 130, 255); /* pink text */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
 }
 
-.grocery{
-    color: darkred; 
-    font-style: italic;
-    font-size: x-large;
-}
-
-.Bottom-Section, .Top-Section{
-    background-color: blanchedalmond;
-    width: 250px;
-    border: 30px solid brown;
+/* To-Do box styling */
+.Top-Section {
+    background-color: #f5ebff; /* very light purple */
+    width: 320px;
+    border: 8px solid #999eff; /* light purple border */
     padding: 20px;
-    margin: 20px auto; /* This centers it horizontally */
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(153, 42, 165, 0.2); /* soft purple shadow */
+    font-family: Arial, sans-serif;
 }
 
+/* Input styling */
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+}
 
+/* Button styling */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #99ccff; /* soft blue */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66b2ff; /* slightly darker on hover */
+}
+
+/* List items */
+li {
+    margin-top: 10px;
+    list-style-position: inside;
+}
+ 
