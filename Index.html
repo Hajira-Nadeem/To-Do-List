@@ -38,6 +38,16 @@
                     const li = document.createElement("li");
                     li.textContent = task
                     //add delete button here if needed
+                    const deleteBtn = document.createElement('button')
+                    deleteBtn.innerText = 'Done';
+                    deleteBtn.style.marginLeft = '100px'
+                    deleteBtn.addEventListener('click', function(){
+                    li.remove();
+                    tasks = tasks.filter(t=>t!==task)
+                    localStorage.setItem("tasks", JSON.stringify(tasks))
+                });
+                li.appendChild(deleteBtn);
+
                     document.getElementById('stuff_to_do').appendChild(li)
                 });
 
@@ -70,7 +80,7 @@
             //removing item from list
             const deleteBtn = document.createElement('button')
             deleteBtn.innerText = 'Done';
-            deleteBtn.style.marginLeft = '350px'
+            deleteBtn.style.marginLeft = '100px'
             deleteBtn.addEventListener('click', function(){
                     newItem.remove();
                 });

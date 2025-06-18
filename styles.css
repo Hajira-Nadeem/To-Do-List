@@ -1,7 +1,7 @@
 /* Header styling */
 h1 {
-    background: linear-gradient(to right, #cceeff, #99ccff, #66b2ff); /* blue gradient */
-    color: rgb(105, 130, 255); /* pink text */
+    background: linear-gradient(to right, #5f6e76, #3f8edd, #b1c7dd); /* blue gradient */
+    color: rgb(0, 14, 84); /* pink text */
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -10,13 +10,13 @@ h1 {
 
 /* To-Do box styling */
 .Top-Section {
-    background-color: #f5ebff; /* very light purple */
+    background-color: #d8bade; /* very light purple */
     width: 320px;
-    border: 8px solid #999eff; /* light purple border */
+    border: 8px solid #373eba; /* light purple border */
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(153, 42, 165, 0.2); /* soft purple shadow */
+    box-shadow: 0 0 10px rgba(249, 200, 255, 0.2); /* soft purple shadow */
     font-family: Arial, sans-serif;
 }
 
@@ -24,7 +24,7 @@ h1 {
 input {
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #00e1ff;
     width: 180px;
 }
 
@@ -33,14 +33,14 @@ button {
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    background-color: #99ccff; /* soft blue */
+    background-color: #3494fb; /* soft blue */
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #66b2ff; /* slightly darker on hover */
+    background-color: #0080ff; /* slightly darker on hover */
 }
 
 /* List items */
