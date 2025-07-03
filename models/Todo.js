@@ -12,3 +12,10 @@ const todoSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Todo', todoSchema);
+
+/*
+{
+  "task": "finish project", 
+  "completed": true 
+}
+*/

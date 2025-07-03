@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Hajira-Nadeem/To-Do-List/issues"
   },
-  "homepage": "https://github.com/Hajira-Nadeem/To-Do-List#readme"
+  "homepage": "https://github.com/Hajira-Nadeem/To-Do-List#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
 }
